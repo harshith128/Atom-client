@@ -42,6 +42,12 @@ color: #282828;
     padding: 2px 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     cursor: pointer;
+
+    width: 113px;
+    height: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
 }
 .btn {
     border: none;
@@ -51,6 +57,11 @@ color: #282828;
     font: inherit;
     cursor: pointer;
     outline: inherit;
+    width: 113px;
+    height: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
 }
 .arrow {
     margin-left: 20px;
@@ -294,6 +305,97 @@ color: #018757;
     color: black;
     text-decoration: underline;
     cursor: pointer;
+}
+
+.cat-cont {
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 31% 31% 31%;
+    gap: 3%;
+}
+
+.display-data {
+    width: 100%;
+    height: 629px;
+    background: #FFFFFF;
+    border: 1px solid #EBEBEB;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.project_info_box{
+    width: 328px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.productName{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    color: #282828;
+}
+.description{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #525252;
+    text-align: left;
+}
+.creator{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: left;
+    color: #525252;
+}
+.green_bar{
+    height: 3px;
+    background: #018757;
+    margin-left: 25px;
+}
+
+.image-cover {
+    width: 100%;
+    max-height: 220px;
+}
+.measures{
+    margin-top: 45px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 328px;
+    margin: auto;
+}
+
+.loc_para{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.loc_img{
+    margin-left: 30px;
+    margin-right: -30px;
+}
+.loc_para>span{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #7A7A7A;
 }
 
 

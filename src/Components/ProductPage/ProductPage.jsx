@@ -3,10 +3,13 @@ import ProductContent from "./ProductContent";
 import ProductNav from "./ProductNav";
 import "./ProductPage.css";
 import { Link } from "react-router-dom";
+import LogoNav from "../FirstPage/LogoNavbar/LogoNav";
 
 export const ProductPage = () => {
     return (
         <div>
+
+            <LogoNav />
             <div className="top-content">
                 <div className="heading">
                     <div className="title1">ORCA Pot-One pot fits all</div>
@@ -42,7 +45,7 @@ export const ProductPage = () => {
                                 <div className="pledge">days to go</div>
                             </div>
                             <div className="back-btn">
-                                <button className="project-btn"><Link to="/reward">Back this project</Link></button>
+                            <Link to="/reward"><button className="project-btn">Back this project</button></Link>
                             </div>
                             <div className="below-btn">
                                 <div>
