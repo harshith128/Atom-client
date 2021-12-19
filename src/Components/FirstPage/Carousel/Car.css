@@ -1,0 +1,56 @@
+.hover:hover{
+	text-decoration: underline;
+	text-decoration-color: #282828;
+	/* color:#282828 */
+}
+.link{
+	color: #003BFF;
+	font-weight:500;
+	margin-left: 2%;
+	text-decoration: none ;
+	margin-top: -0.11%;
+}
+.link:hover{
+	text-decoration: underline;
+	text-decoration-color:#003BFF ;
+}
+
+.rec-arrow-left {
+	background-color: white;
+	position: relative;
+	top: -62%;
+	left: 81%;
+}
+.rec-arrow-right {
+	background-color: white;
+    position: relative;
+    top: -62%;
+    left: -11%;
+
+}
+button.rec-dot{
+  background-color: white;
+  box-shadow: none;
+}
+
+button.rec-dot:hover, button.rec-dot:active, button.rec-dot:focus  {
+  box-shadow: none;
+  background-color:white;
+}
+
+button.rec-arrow{
+	/* background-color: rgb(185, 49, 49); */
+	 box-shadow: none;
+	 border-radius: 0%;
+	 background-color: red;
+	 /* color: #003BFF; */
+	 padding: 0%;
+
+}
+button.rec-arrow:hover, button.rec-arrow:focus  {
+  /* box-shadow: none; */
+  border-radius: 50%;
+  /* background-color: red; */
+}
+
+

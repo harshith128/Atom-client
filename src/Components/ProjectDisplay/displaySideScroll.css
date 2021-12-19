@@ -1,0 +1,14 @@
+.carousel-cont {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+.carousel-cont::-webkit-scrollbar {
+    display: none;
+}

@@ -1,0 +1,15 @@
+.nav{
+    margin-right:1%;
+
+}
+.nav:hover{
+    color: #018757;
+    text-decoration: underline;
+}
+.family{
+    font-family: 'Inter',sans-serif;
+}
+.family:hover{
+    color: #018757;
+    text-decoration: underline;
+}
