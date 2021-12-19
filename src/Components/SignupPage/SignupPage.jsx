@@ -19,7 +19,7 @@ const handleSignupChange = (e) => {
 }
 
 const handleSignUp = async() => {
-    const data = await fetch("http://localhost:2357/signup",{
+    const data = await fetch("https://atom-kickstarter-server.herokuapp.com/signup",{
         method: "POST",
         headers: {
             "content-type": "application/json"

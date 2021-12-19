@@ -26,7 +26,7 @@ export default function Carousel_func({ title }) {
 	};
 	useEffect(() => {
 		const run = async () => {
-			const data = await axios.get("http://localhost:2357/projects/random");
+			const data = await axios.get("https://atom-kickstarter-server.herokuapp.com/projects/random");
 			// console.log(data.data.projects)
 			setDetails(data.data.projects);
 		};

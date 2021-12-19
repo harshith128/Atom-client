@@ -8,14 +8,14 @@ export default function FeaturedProject() {
 
 	useEffect(() => {
 		const fetchData = async () => {
-			const ans = await axios.get("http://localhost:2357/projects/random");
+			const ans = await axios.get("https://atom-kickstarter-server.herokuapp.com/projects/random");
 			setRes(ans.data.projects[0]);
 		};
 		fetchData();
 	}, []);
 	// async function load() {
 	// 	let data = await axios
-	// 		.get("http://localhost:2357/projects/random")
+	// 		.get("https://atom-kickstarter-server.herokuapp.com/projects/random")
 	// 		.then((d) => setRes(d));
 	// }
 	// console.log(res.data.projects[0]);
