@@ -7,7 +7,7 @@ export const DisplayProjects = () => {
     const [displayData, setDisplayData] = useState([]);
 
     const getDisplayData = async() => {
-        const res = await axios("https://atom-kickstarter-server.herokuapp.com/projects/discovermore");
+        const res = await axios("http://localhost:2357/projects/discovermore");
         // console.log(res.data.projects);
         setDisplayData(res.data.projects);
     }

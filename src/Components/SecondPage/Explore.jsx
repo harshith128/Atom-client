@@ -10,7 +10,7 @@ export const Explore = ({ subCategory, category }) => {
 
 	const getData = async () => {
 		const res = await axios(
-			"https://atom-kickstarter-server.herokuapp.com/projects/subcategory?subcategory=Tabletop Games"
+			"http://localhost:2357/projects/subcategory?subcategory=Tabletop Games"
 		);
 		console.log(active);
 		setSubCategoryData(res.data.projects);

@@ -1,5 +1,6 @@
-import axios from "axios";
+// import axios from "axios";
 import { useState } from "react";
+import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
 import "./SignupPage.css";
 const init = {
@@ -11,6 +12,7 @@ const init = {
 
 const SignupPage = () => {
 	const [signupDetails, setSignupDetails] = useState(init);
+	const history = useHistory();
 
 	const handleSignupChange = (e) => {
 		const { name, value } = e.target;
@@ -18,7 +20,11 @@ const SignupPage = () => {
 	};
 
 	const handleSignUp = async () => {
-		const data = await fetch("https://atom-kickstarter-server.herokuapp.com/signup", {
+		if(signupDetails.username.trim() === "" || signupDetails.email.trim() === "" || signupDetails.password.trim() === "" || signupDetails.confirmPassword.trim() !== signupDetails.password.trim()){
+			alert("Please enter valid details");
+			return
+		}
+		const data = await fetch("http://localhost:2357/signup", {
 			method: "POST",
 			headers: {
 				"content-type": "application/json",
@@ -28,17 +34,23 @@ const SignupPage = () => {
 		const dt = await data.json();
 		if (data.status === 201) {
 			const { user, token } = dt;
+			// localStorage.setItem("reward", JSON.stringify({amount}));
 			console.log(user, token);
-			alert("signup in successful");
+			alert("Signup in successful");
+			history.push({
+				pathname: '/carddetail',
+				state: { user }
+			})
+
 		} else {
-			alert("something went wrong");
+			alert("Something went wrong");
 		}
 	};
 
 	return (
 		<div className="Container">
 			<div className="top__bar">
-				<img src="images/Logo.png" alt="logo" className="logo__img" />
+				<Link to="/"><img src="images/Logo.png" alt="logo" className="logo__img" /></Link>
 			</div>
 
 			<div className="product_name">
@@ -92,12 +104,10 @@ const SignupPage = () => {
 					</div>
 
 					{/* <button onClick={handleSignUp} className='create_account_btn'>Create account</button> */}
-					<Link to="/carddetail">
 						{" "}
 						<button onClick={handleSignUp} className="create_account_btn">
 							Create Account
 						</button>
-					</Link>
 
 					<div className="privacy_policy">
 						By signing up, you agree to our{" "}
@@ -112,8 +122,9 @@ const SignupPage = () => {
 					<Link to="/login">
 						<button className="login_btn">Log in</button>
 					</Link>
-
+					<button className="google_btn">Continue with Google</button>
 					<button className="fb_btn">Continue with Facebook</button>
+
 
 					<span className="get_notified">
 						Get notified when your friends back and launch projects. We'll never
