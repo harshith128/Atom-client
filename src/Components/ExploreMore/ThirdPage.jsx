@@ -8,7 +8,7 @@ export const ThirdPage = () => {
 
     const getData = async () => {
 		const res = await axios(
-			"http://localhost:2357/products"
+			"https://atom-kickstarter-server.herokuapp.com/products"
 		);
 		console.log(res.data.product);
 		setDisplaydata(res.data.product);

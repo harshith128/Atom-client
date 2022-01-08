@@ -10,9 +10,9 @@ export default function Recommended() {
 
 	useEffect(() => {
 		const fetchData = async () => {
-			// const res = await axios.get(`http://localhost:2357/projects/random?_page=${page}&_limit=2`);
+			// const res = await axios.get(`https://atom-kickstarter-server.herokuapp.com/projects/random?_page=${page}&_limit=2`);
 			const res = await fetch(
-				`http://localhost:2357/projects/recommended?page=${page}`
+				`https://atom-kickstarter-server.herokuapp.com/projects/recommended?page=${page}`
 			).then((d) => d.json());
 			setGet(res.projects);
 		};

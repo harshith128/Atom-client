@@ -19,7 +19,7 @@ const handleLoginChange = (e) => {
 }
 
 const handleLogin = async() => {
-    const data = await fetch("http://localhost:2357/login",{
+    const data = await fetch("https://atom-kickstarter-server.herokuapp.com/login",{
         method: "POST",
         headers: {
             "content-type": "application/json"

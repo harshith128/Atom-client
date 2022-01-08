@@ -14,7 +14,7 @@ export const Exploremore = () => {
 	const [total, setTotal] = useState(0);
 
 	const getData = async () => {
-		const res = await axios(`http://localhost:2357/products?page=${page}`);
+		const res = await axios(`https://atom-kickstarter-server.herokuapp.com/products?page=${page}`);
 		// console.log(res.data.product);
 		// console.log(page);
 		setTotal(res.data.total);
